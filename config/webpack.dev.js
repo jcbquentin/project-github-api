@@ -40,13 +40,17 @@ module.exports = merge(common, {
     ],
   },
 
+  output: {
+    publicPath: '/',
+  },
+
   devServer: {
     historyApiFallback: true,
     contentBase: paths.build,
     clientLogLevel: 'warn',
     overlay: true,
     stats: 'minimal',
-    open: true,
+    open: false,
     compress: true,
     hot: true,
     watchOptions: {
